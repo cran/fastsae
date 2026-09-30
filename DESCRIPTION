@@ -1,0 +1,42 @@
+Package: fastsae
+Type: Package
+Title: Fast Implementation of Small Area Estimation Methods
+Version: 0.1.0
+Authors@R: c(
+      person("Ridson", "Al Farizal P", role = c("aut", "cre","cph"), email = "alfrzlp@gmail.com", comment = c(ORCID = "0000-0003-0617-0214")),
+      person("Azka", "Ubaidillah", role = "aut", email = "azka@stis.ac.id", comment = c(ORCID = "0000-0002-3597-0459")) 
+    )
+Description: Provides high-performance implementations of Small Area Estimation
+    (SAE) methods leveraging C++ ('Rcpp', 'RcppArmadillo') and 'OpenMP' multi-threading.
+    Supports standard area-level Fay-Herriot models (Fay and Herriot, 1979
+    <doi:10.1080/01621459.1979.10482505>), Spatial Fay-Herriot models (Pratesi
+    and Salvati, 2008 <doi:10.1002/env.861>), Spatio-Temporal Fay-Herriot models
+    (Marhuenda et al., 2013 <doi:10.1016/j.csda.2013.01.016>), and unit-level
+    Battese-Harter-Fuller models (Battese et al., 1988 <doi:10.1080/01621459.1988.10478561>).
+    Features include empirical best linear unbiased prediction (EBLUP), analytical
+    and bootstrap Mean Squared Error (MSE) estimation, automatic handling of
+    unsampled domains, and modern S3 diagnostic methods.
+License: GPL (>= 3)
+URL: https://ridsonap.github.io/fastsae/,
+        https://github.com/ridsonap/fastsae
+BugReports: https://github.com/ridsonap/fastsae/issues
+Encoding: UTF-8
+LazyData: true
+Imports: cli, ggplot2, lme4, methods, Rcpp, rlang, stats, utils
+Suggests: doParallel, dplyr, emdi, foreach, MASS, parallel, sae, knitr,
+        rmarkdown, testthat (>= 3.0.0)
+VignetteBuilder: knitr
+LinkingTo: Rcpp, RcppArmadillo
+Depends: R (>= 4.1.0)
+Collate: utils.R RcppExports.R data.R methods.R autoplot.R eblup_fh.R
+        eblup_sfh.R eblup_stfh.R eblup_bhf.R
+Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3
+NeedsCompilation: yes
+Packaged: 2026-09-21 13:12:35 UTC; macbook
+Author: Ridson Al Farizal P [aut, cre, cph] (ORCID:
+    <https://orcid.org/0000-0003-0617-0214>),
+  Azka Ubaidillah [aut] (ORCID: <https://orcid.org/0000-0002-3597-0459>)
+Maintainer: Ridson Al Farizal P <alfrzlp@gmail.com>
+Repository: CRAN
+Date/Publication: 2026-09-30 09:50:02 UTC
